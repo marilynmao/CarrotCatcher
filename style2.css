@@ -1,14 +1,74 @@
 body {
   padding-top: 5rem;
-}
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+  background: url('Resources/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
 }
 
-/* .button {
-  background-color: #6495ED;
-  border: solid;
-  text-align:center;
-  cursor: pointer;
+a {
+  color: #044444;
+}
+
+.topNav {
+  /*display: flex;
+  flex-direction: row; */
+  position: relative;
+}
+
+
+.navLeft {
+  float: left;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.navLeft i {
+  margin: 10px;
+}
+
+.navRight {
+  float: right;
+  margin-top: 0px;
+  margin-right: 20px;
+}
+
+.navRight i {
+  padding: 10px;
+}
+
+.title {
+  margin-top: 100px;
+}
+
+.btn {
+  border-radius: 30%;
+  padding: 10px 50px 10px 50px;
+}
+
+/* LANDING PAGE */
+
+.instructions-btn button{
+
+}
+
+.
+
+.container{
+  margin: auto;
+  width: 50%;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+ .btn-group-vertical button{
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* .starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
 } */
