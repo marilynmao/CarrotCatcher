@@ -5,11 +5,9 @@ body {
   position: relative;
 }
 
-a {
-  color: #044444;
-}
-
 .topNav {
+  position: absolute;
+  top: -60px;
   /*display: flex;
   flex-direction: row; */
   position: relative;
@@ -40,20 +38,45 @@ a {
   margin-top: 100px;
 }
 
-.btn {
-  border-radius: 30%;
+.play-btn {
+  /*border-radius: 30%;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
   padding: 10px 50px 10px 50px;
 }
 
+.level-btn {
+  width: 150px;
+  margin: 50px;
+}
+
+.icon {
+  font-size: 2em; /*font awesome icons are sized by font-size*/
+  color: #044444;
+}
 /* LANDING PAGE */
 
 .instructions-btn button{
 
 }
 
-.
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
-.container{
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   margin: auto;
   width: 50%;
   border: none;
@@ -62,11 +85,17 @@ a {
   color: white;
 }
 
- .btn-group-vertical button{
+.bunny {
+  width: 100px;
+  bottom: 100px;
+}
+
+ /*.btn-group-vertical button{
   text-align: center;
   margin-bottom: 10px;
   width: 100%;
 }
+*/
 
 /* .starter-template {
   padding: 3rem 1.5rem;
