@@ -13,7 +13,6 @@ body {
   position: relative;
 }
 
-
 .navLeft {
   float: left;
   margin-top: 0px;
@@ -34,6 +33,12 @@ body {
   padding: 10px;
 }
 
+.bottomNav {
+  position: absolute;
+  top: 375px;
+  position: relative;
+}
+
 .title {
   margin-top: 100px;
 }
@@ -50,6 +55,17 @@ body {
 .level-btn {
   width: 150px;
   margin: 50px;
+}
+
+.leaderboard-btn {
+  width: 250px;
+  margin: 50px;
+}
+
+.leaderboard-attr {
+  width: 150px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .icon {
