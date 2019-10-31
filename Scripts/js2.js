@@ -1,3 +1,4 @@
+//-----------POP UP SCREEN (MODAL)-----------
 // Get the modal
 var popup = document.getElementById("popup");
 
@@ -22,4 +23,18 @@ window.onclick = function(event) {
   if (event.target == popup) {
     popup.style.display = "none";
   }
+}
+
+//-----------TOGGLE VOLUME-----------
+var volumeIcon = document.getElementById("toggleVolume");
+
+volumeIcon.onclick = function() {
+  if (document.getElementById("toggleVolume").src == "") { //if unmuted/playing sound
+    document.getElementById("toggleVolume").src = "http://www.userinterfaceicons.com/80x80/maximize.png";
+
+  }
+  else { //if on mute
+    document.getElementById("imgClickAndChange").src = "http://www.userinterfaceicons.com/80x80/minimize.png";
+  }
+
 }
