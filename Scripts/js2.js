@@ -24,7 +24,6 @@ window.onclick = function(event) {
     popup.style.display = "none";
   }
 }
-
 //-----------TOGGLE VOLUME-----------
 var volumeIcon = document.getElementById("toggleVolume");
 
@@ -37,4 +36,13 @@ volumeIcon.onclick = function() {
     document.getElementById("imgClickAndChange").src = "http://www.userinterfaceicons.com/80x80/minimize.png";
   }
 
+}
+
+// SCORE SUBMISSION
+// get player's name
+var player_name = " ";
+function submitScore()
+{
+  player_name = document.getElementById("playerName").value;
+  window.location.href = "Leaderboard.html";
 }

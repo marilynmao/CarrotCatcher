@@ -168,3 +168,74 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* cosmetics options page  */
+/* .navigationButtons{
+  float:left;
+	margin-right:20px;
+	margin-left:20px;
+}
+
+.background-container{
+	margin-left: auto;
+  text-align:center;
+}
+
+#b1{
+  display:block;
+	float:left
+}
+
+#b2{
+	display:none;
+	float:left
+}
+
+#b3{
+	display:none;
+	float:left
+}
+
+#b4{
+	display:none;
+	float:left
+} */
+
+/* score submission page */
+.container{
+  position: relative;
+  margin: auto;
+  width: 60%;
+  height:200%;
+  border: none;
+  padding: 10px;
+}
+
+.input-container{
+  background-color: #3C6B6E;
+  color: white;
+  padding-top: 50px;
+  position: relative;
+  margin: auto;
+  width: 35%;
+  height: 60%;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+input[type=text] {
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+input[type=button] {
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 10px;
+  background-color:#3C6B6E;
+  margin-top: 30px;
+}
