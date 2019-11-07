@@ -38,6 +38,7 @@ volumeIcon.onclick = function() {
 
 }
 
+
 // SCORE SUBMISSION
 // get player's name
 var player_name = " ";

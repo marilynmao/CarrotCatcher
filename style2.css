@@ -239,3 +239,101 @@ input[type=button] {
   background-color:#3C6B6E;
   margin-top: 30px;
 }
+
+
+/* cosmetics options page  */
+.navigationButtons{
+  float:left;
+	margin-right:20px;
+	margin-left:20px;
+
+}
+
+#Previous{
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid #3C6B6E;
+  border-bottom: 25px solid transparent;
+  background-color: transparent;
+}
+
+#Next{
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid #3C6B6E;
+  border-bottom: 25px solid transparent;
+  background-color: transparent;
+}
+
+.background-container{
+	margin-left: auto;
+  text-align:center;
+}
+
+#b1{
+  display:block;
+	float:left
+}
+
+#b2{
+	display:none;
+	float:left
+}
+
+#b3{
+	display:none;
+	float:left
+}
+
+#b4{
+	display:none;
+	float:left
+}
+
+/* character */
+
+#char_image{
+  width: 30%;
+  height: 30%;
+}
+.radio_character{
+display: none !important;
+}
+
+.label_char {
+opacity: 1;
+
+
+}
+
+.radio_character:checked + label {
+opacity: .01;
+
+}
+
+/*Container for avatars*/
+.avatarcontainer{
+  margin: auto;
+  width: 500px;
+  height: 650px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  display: inline-flex;
+
+}
+#currentChar{
+  width:50%;
+  height: 50%;
+}
+
+#prevChar{
+  height: 5%;
+  
+}
+
+#nextChar{
+  height: 5%;
+}
