@@ -5,6 +5,18 @@ body {
   position: relative;
 }
 
+/*Container for avatars*/
+.avatarcontainer{
+  margin: auto;
+  width: 500px;
+  height: 650px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  
+}
+
 .topNav {
   position: absolute;
   top: -60px;
