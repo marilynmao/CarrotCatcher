@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <title>Carrot Catcher</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="container">
+
+    <div id="score_help"> Score:
+      <span id="score">0</span> | Life:
+      <span id="life"></span> | Use mouse to control
+    </div>
+
+    <div id="skyline"></div>
+
+    <div id="cloud1" class="cloud"></div>
+    <div id="cloud2" class="cloud"></div>
+    <div id="cloud3" class="cloud"></div>
+
+    <div id="carrot1" class="carrot" data-miss='1'></div>
+    <div id="carrot2" class="carrot" data-miss='2'></div>
+    <div id="carrot3" class="carrot" data-miss='3'></div>
+
+    <div id="miss1" class="miss"></div>
+    <div id="miss2" class="miss"></div>
+    <div id="miss3" class="miss"></div>
+
+    <div id="basket">
+      <span id="score_1"></span>
+    </div>
+
+    <div id="floor"></div>
+
+    <button id="restart">Restart</button>
+
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="collision_detection.js"></script>
+  <script src="variables.js"></script>
+  <script src="functions.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
