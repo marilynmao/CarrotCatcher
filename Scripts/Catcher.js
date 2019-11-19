@@ -98,6 +98,13 @@ function endGame(){
   noStroke();
   fill(255);
   text("GAME OVER!", width /2, height/2);
+
+  //advances to score submission screen after three seconds
+  setTimeout(function(){ scoreSubmit() }, 3000);
+}
+
+function scoreSubmit(){
+  window.location.href = "ScoreSubmission.html";
 }
 
 function rCol(){
