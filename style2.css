@@ -217,6 +217,11 @@ input[type=button] {
 
 
 /* cosmetics options page  */
+.background-container{
+  margin-top: 60px;
+}
+
+
 #output{
   text-align: center;
   height: 30px;
