@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style2.css" rel="stylesheet">
+    <!--Title-->
+     <title>Carrot Catcher!</title>
+  </head>
+
+  <body>
+    <div class="topNav">
+      <div class="navLeft">
+        <!-- <i class="far fa-question-circle icon"></i> -->
+        <i id="toggleVolume" class="fas fa-volume-up icon"></i>
+      </div>
+      <div class="navRight">
+        <a href="Leaderboard.html"><i class="fas fa-list-ol icon"></i></a>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="flex-container-row">
+        <button class ="btn btn-primary btn-lg" id="prev"  onclick="Previous()"><</button>
+        <div id="output"></div>
+        <button class ="btn btn-primary btn-lg" id="next" onclick="Next()">></button>
+      </div>
+    </div>
+
+
+    <div class="bottomNav">
+      <div class="flex-container-row">
+        <a href="LevelSelect.html"><button type="button" class ="btn btn-primary btn-lg -btn leaderboard-btn"> Done </button></a>
+      </div>
+    </div>
+
+  <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
+  <script src="\Scripts\background.js"></script>
+  </body>
+</html>
