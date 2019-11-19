@@ -12,18 +12,18 @@
   </head>
 
   <body>
-    <audio>
-      <source src="horse.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+    <!--Audio-->
+    <audio id="backgroundAudio" autoplay loop>
+      <source src="Resources/babyshark.mp3" type="audio/mpeg">
     </audio>
+
+    <!--Navigatoin Bar-->
       <div class="topNav">
         <div class="navLeft">
           <!-- Trigger/Open The Help Modal -->
           <a id="helpIcon"><i class="far fa-question-circle icon"></i></a>
-
           <!-- The Help Modal -->
           <div id="popup" class="modal">
-
             <!-- Modal content -->
             <div class="modal-content">
               <span class="close">&times;</span>
@@ -32,26 +32,19 @@
           </div>
           <!--End Popup page for Help-->
 
-          <i id="toggleVolume" class="fas fa-volume-up icon"></i>
+          <i id="volumeOn" class="fas fa-volume-up icon"></i>
+          <i id="volumeMute" class="fas fa-volume-mute icon"></i>
         </div>
         <div class="navRight">
           <a href="CosmeticsOptions.html"><i class="fas fa-carrot icon"></i></a>
           <a href="Leaderboard.html"<i class="fas fa-list-ol icon"></i></a>
         </div>
-      </div>
 
+      <!--Title and Start Button-->
       <div class="flex-container-column">
         <h1 class="title"> Carrot Catcher </h1>
         <a href="LevelSelect.html"><button type="button" class ="btn btn-primary btn-lg play-btn">Play</button></a>
       </div>
-    <!--</main> /.container -->
-
-
-    <!-- <div class = "button container"> -->
-
-    <!-- </div> -->
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS , then Font fontawesome-->

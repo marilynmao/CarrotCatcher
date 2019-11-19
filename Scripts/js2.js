@@ -28,17 +28,23 @@ window.onclick = function(event) {
   }
 }
 //-----------TOGGLE VOLUME-----------
-var volumeIcon = document.getElementById("toggleVolume");
+var volumeOnIcon = document.getElementById("volumeOn");
+var volumeMuteIcon = document.getElementById("volumeMute");
+var audio = document.getElementById("backgroundAudio");
 
-volumeIcon.onclick = function() {
-  if (document.getElementById("toggleVolume").src == "") { //if unmuted/playing sound
-    document.getElementById("toggleVolume").src = "http://www.userinterfaceicons.com/80x80/maximize.png";
+//Mute button will not display at first
+volumeMuteIcon.style.display = "none";
 
-  }
-  else { //if on mute
-    document.getElementById("imgClickAndChange").src = "http://www.userinterfaceicons.com/80x80/minimize.png";
-  }
+volumeOnIcon.onclick = function() {
+  volumeMuteIcon.style.display = "inline";
+  volumeOnIcon.style.display = "none";
+  audio.muted = !audio.muted;
+}
 
+volumeMuteIcon.onclick = function() {
+  volumeOnIcon.style.display = "inline";
+  volumeMuteIcon.style.display = "none";
+  audio.muted = !audio.muted;
 }
 
 // SCORE SUBMISSION
