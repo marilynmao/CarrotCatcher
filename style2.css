@@ -247,12 +247,7 @@ input[type=button] {
 }
 
 #prevChar{
-<<<<<<< HEAD
-  margin-block-start: 150px;
-=======
   height: 5%;
-
->>>>>>> 742e1da5bddd57e31f94a4f519152d36e194575c
 }
 
 /* #nextChar{
