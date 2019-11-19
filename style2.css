@@ -231,25 +231,79 @@ input[type=button] {
 
 /*Container for avatars*/
 .avatarcontainer{
-  margin: auto;
-  width: 500px;
+  /* width: 500px;
   height: 650px;
   border: none;
   padding: 10px;
-  text-align: center;
   display: inline-flex;
-
+  margin-inline-start: 35%;
+  position: absolute; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 #currentChar{
-  width:50%;
-  height: 50%;
+  margin: 0;
+  width: 60%;
 }
 
 #prevChar{
   height: 5%;
-
 }
 
-#nextChar{
-  height: 5%;
+/* #nextChar{
+  margin-block-start: 150px;
+} */
+body{
+  margin:50px;
+}
+a.nextChar {
+  height:50px;
+    line-height:50px;
+    vertical-align:middle;
+    text-align:center;
+    padding:0 25px;
+    color:#ffffff;
+    background-color:#fcaaaa;
+    position:relative;
+    display:inline-block;
+
+}
+a.nextChar:after{
+  position:absolute;
+  right:-20px;
+  content:" ";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 0 25px 20px;
+  border-color: transparent transparent transparent #fcaaaa;
+}
+
+a.prevChar:before{
+  position:absolute;
+  left:-20px;
+  content:" ";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 20px 25px 0;
+  border-color: transparent #fcaaaa transparent transparent ;
+}
+
+a.prevChar {
+  height:50px;
+    line-height:50px;
+    vertical-align:middle;
+    text-align:center;
+    padding:0 25px;
+    color:#ffffff;
+    background-color:#fcaaaa;
+    position:relative;
+    display:inline-block;
+
 }
