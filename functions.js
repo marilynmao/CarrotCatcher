@@ -1,8 +1,6 @@
-// // updateBackground
-$(window).load(function(){
-var b = sessionStorage.getItem("gamebackground");
-// var bg = Background.imageArray;
-document.body.style.backgroundImage = "url('" + b + "')";
+$(window).ready(function(){
+  var x = sessionStorage.getItem("gamebackground");
+  document.body.style.backgroundImage = "url('"+ x + "')";
 });
 
 $(document).on('mousemove', function (e) {
