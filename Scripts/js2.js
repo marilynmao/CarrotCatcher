@@ -1,6 +1,12 @@
 //File editing
 const fs = require('fs');
 
+// updateBackground
+$(window).ready(function(){
+var b = sessionStorage.getItem("gamebackground");
+// var bg = Background.imageArray;
+document.body.style.backgroundImage = "url('" + b + "')";
+});
 
 //-----------POP UP SCREEN (MODAL)-----------
 // Get the modal
