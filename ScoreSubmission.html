@@ -32,6 +32,7 @@
     <div class ="input-container">
       <div class="flex-container-column">
         <h2 id = "score"> Score: </h2>
+        <h2 id="num"></h2>
         <div class="flex-container-row">
           <h1 id = "name"> Name: </h1>
           <input type ="text" id = "playerName" name = "playerName">
@@ -42,11 +43,11 @@
     <div class ="submit-container">
       <div class="flex-container-column">
       <input type = "button" onclick="submitScore()" value ="Submit Score">
+      </div>
     </div>
-    </div>
 
-
-
+  <script>document.getElementById("num").innerHTML = localStorage.getItem("score");</script>
+  <script src="Scripts/js2.js"></script>
 
     <!-- <div class="bottomNav">
       <div class="flex-container-row">
@@ -55,6 +56,5 @@
     </div> -->
 
   <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
-  <script src="Scripts\js2.js"></script>
   </body>
 </html>

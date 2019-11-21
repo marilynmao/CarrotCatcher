@@ -60,6 +60,11 @@ function update_score() {
 function stop_the_game() {
     cancelAnimationFrame(anim_id);
     restart.slideDown();
+
+    //testing data transfer between files
+    //localStorage.setItem("score", score);
+    //alert(localStorage.getItem("score"));
+    //window.location.href = "ScoreSubmission.html";
 }
 
 restart.click(function () {

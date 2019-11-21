@@ -37,11 +37,16 @@
     <!-- High Score 1 -->
     <div class="leaderboard-box">
       <div class="flex-container-row">
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> ABC </h1>
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> 500 </h1>
+        <h1 id = "name1" class = "leaderboard-attr" style="color:#ffffff"> ABC </h1>
+        <h1 id = "score1" class = "leaderboard-attr" style="color:#ffffff"> 500 </h1>
         <img src="Resources/char0.png" class="leaderboard-attr" style="object-fit: contain"</img>
       </div>
     </div>
+
+    <script>
+    document.getElementById("name1").innerHTML = localStorage.getItem("name");
+    document.getElementById("score1").innerHTML = localStorage.getItem("score");
+    </script>
 
     <!-- High Score 2 -->
     <div class="leaderboard-box">
@@ -71,7 +76,7 @@
     <!-- Optional JavaScript -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS , then Font fontawesome-->
-    <script src="Scripts\js2.js"></script>
+    <script src="Scripts/js2.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
