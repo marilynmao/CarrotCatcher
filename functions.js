@@ -1,3 +1,8 @@
+$(window).ready(function(){
+  var x = sessionStorage.getItem("gamebackground");
+  document.body.style.backgroundImage = "url('"+ x + "')";
+});
+
 $(document).on('mousemove', function (e) {
     basket.css('left', e.pageX);
 });

@@ -4,6 +4,7 @@ body {
     height: 100%;
     margin: 0;
     font-family: sans-serif;
+
 }
 
 .topNav {
@@ -49,7 +50,7 @@ body {
     border: 1px solid red;
     /* overflow: visible; */
     /*background-color: #31b6ce;*/
-    background: url('Resources/background.jpg') no-repeat center center fixed;
+    /* background: url('/Resources/background.jpg') no-repeat center center fixed; */
     background-size: cover;
     /* background-color: #cccccc; */
 }
