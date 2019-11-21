@@ -1,3 +1,10 @@
+// // updateBackground
+$(window).load(function(){
+var b = sessionStorage.getItem("gamebackground");
+// var bg = Background.imageArray;
+document.body.style.backgroundImage = "url('" + b + "')";
+});
+
 $(document).on('mousemove', function (e) {
     basket.css('left', e.pageX);
 });
@@ -9,7 +16,7 @@ function carrot_down(carrot) {
 
 function check_carrot_hits_floor(carrot) {
     if (collision(carrot, floor)) {
-        show_bulls_eye(carrot);
+        show_miss(carrot);
         decrement_life();
         return true;
     }
@@ -20,13 +27,13 @@ function set_carrot_to_initial_position(carrot) {
     carrot.css('top', carrot_initial_position);
 }
 
-function show_bulls_eye(carrot) {
+function show_miss(carrot) {
     miss_num = carrot.attr('data-miss');
     $('#miss' + miss_num).show();
-    hide_bulls_eye(miss_num);
+    hide_miss(miss_num);
 }
 
-function hide_bulls_eye(miss_num) {
+function hide_miss(miss_num) {
     setTimeout(function () {
         $('#miss' + miss_num).hide();
     }, 800);

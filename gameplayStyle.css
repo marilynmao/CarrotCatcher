@@ -4,7 +4,43 @@ body {
     height: 100%;
     margin: 0;
     font-family: sans-serif;
+
 }
+
+.topNav {
+  position: absolute;
+  top: -60px;
+  /*display: flex;
+  flex-direction: row; */
+  position: relative;
+}
+
+.navLeft {
+  float: left;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.navLeft i {
+  margin: 10px;
+}
+
+.navRight {
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.navRight i {
+  padding: 10px;
+}
+
+.icon {
+  font-size: 2em; /*font awesome icons are sized by font-size*/
+  color: #044444;
+}
+
+/* */
 
 #container {
     height: 100%;
@@ -14,7 +50,7 @@ body {
     border: 1px solid red;
     /* overflow: visible; */
     /*background-color: #31b6ce;*/
-    background: url('/Resources/background.jpg') no-repeat center center fixed;
+    /* background: url('/Resources/background.jpg') no-repeat center center fixed; */
     background-size: cover;
     /* background-color: #cccccc; */
 }
@@ -36,7 +72,7 @@ body {
 .cloud {
     position: absolute;
     height: 14.5%;
-    width: 11%;
+    width: 11.5%;
     top: 10%;
     background: url('/Resources/cloud.png');
     background-size: cover;
@@ -142,6 +178,7 @@ body {
     background-color: fuchsia;
     color: white;
     top: 40%;
+    right: 0%;
     font-size: 35px;
     display: none;
     cursor: pointer;

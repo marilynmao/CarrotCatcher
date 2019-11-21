@@ -1,6 +1,7 @@
 //File editing
 const fs = require('fs');
 
+
 //-----------POP UP SCREEN (MODAL)-----------
 // Get the modal
 var popup = document.getElementById("popup");
@@ -43,15 +44,15 @@ volumeIcon.onclick = function() {
 
 // SCORE SUBMISSION
 // get player's name
-var player_name = " ";
+//var player_name = " ";
 function submitScore()
 {
-  player_name = document.getElementById("playerName").value;
-
-  //trying to write the player's name to a text file so the leaderboard can get it
-  fs.appendFile('Leaderboard/LeaderList.txt', player_name, (err) => {
-    if (err) throw err;
-  });
+  localStorage.setItem("name", document.getElementById("playerName").value);
 
   window.location.href = "Leaderboard.html";
+}
+
+function getPlayerName()
+{
+  alert(localStorage.getItem("name"));
 }

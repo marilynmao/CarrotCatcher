@@ -7,6 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="gameplayStyle.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
     <!--Title-->
      <title>Carrot Catcher!</title>
 <!--
@@ -15,13 +16,46 @@
      <script type="text/javascript" src="Scripts/Ball.js"></script> -->
   </head>
 
+
+
   <body>
+
+
+
   <div id="container">
 
     <div id="score_help"> Score:
       <span id="score">0</span> | Life:
       <span id="life"></span> | Use mouse to control
     </div>
+
+    <audio>
+      <source src="horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+      <div class="topNav">
+        <div class="navLeft">
+          <!-- Trigger/Open The Help Modal -->
+          <a id="helpIcon"><i class="far fa-question-circle icon"></i></a>
+
+          <!-- The Help Modal -->
+          <div id="popup" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img class="helpImage" src="Resources/KeyboardInstructions.jpg"/>
+            </div>
+          </div>
+          <!--End Popup page for Help-->
+
+          <i id="toggleVolume" class="fas fa-volume-up icon"></i>
+        </div>
+        <div class="navRight">
+          <a href="CosmeticsOptions.html"><i class="fas fa-carrot icon"></i></a>
+          <a href="Leaderboard.html"<i class="fas fa-list-ol icon"></i></a>
+        </div>
+      </div>
 
     <div id="skyline"></div>
 
@@ -49,6 +83,7 @@
   <script src="jquery.min.js"></script>
   <script src="collision_detection.js"></script>
   <script src="variables.js"></script>
+  <script src="Background.js"></script>
   <script src="functions.js"></script>
   <script src="script.js"></script>
 </body>
