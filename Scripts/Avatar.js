@@ -3,48 +3,46 @@ function selectAvatar()
   window.location.href = 'selectAvatar.html';
 }
 
-function avatarCache(base, first, last) {
-  this.cache = [];
+function avatarArray(array, base, first, last) {
   var img;
   for (var i = first; i <= last; i++) {
     img = new Image();
-    img.src = base + i + ".png";
-    this.cache.push(img);
-
+    img.src = base + i + '.png';
+    array[i] = img;
   }
-
 }
-var myAvatarCache = new avatarCache('Resources/char', 0, 7);
 
+// var img = document.getElementById("currentChar").src;
 
+var myAvatarArray = [];
+avatarArray(myAvatarArray, 'Resources/char', 0, 7);
 
 function nextChar() {
-
-  var img = document.getElementById("currentChar");
-  var cache = myAvatarCache;
-  for(var i = 0; i < myAvatarCache.length; i++) {
-    if(myAvatarCache[i].src === img.src) {
-      if(i === (myAvatarCache.length - 1)) { //if at the last, back to first avatar
-        img.src = myAvatarCache[0].src;
+  var img = document.getElementById("currentChar").src;
+  for(var i = 0; i < myAvatarArray.length; i++) {
+    if(myAvatarArray[i].src === img) {
+      if(i === (myAvatarArray.length - 1)) { //if at the last, back to first avatar
+        img = myAvatarArray[0].src;
         break;
       }
-      img.src = myAvatarCache[i+1].src;
+      img = myAvatarArray[i+1].src;
       break;
     }
   }
+  document.getElementById("currentChar").src = img;
 }
 
-function prevchar() {
-  var img = document.getElementById("currentChar");
-  var cache = myAvatarCache;
-  for(var i = 0; i < myAvatarCache.length; i++) {
-    if(myAvatarCache[i].src === img.src) {
+function prevChar() {
+  var img = document.getElementById("currentChar").src;
+  for(var i = 0; i < myAvatarArray.length; i++) {
+    if(myAvatarArray[i].src === img) {
       if(i === 0) { //if at the first, back to last avatar
-        img.src = myAvatarCache[myAvatarCache.length - 1].src;
+        img = myAvatarArray[myAvatarArray.length - 1].src;
         break;
       }
-      img.src = myAvatarCache[i-1].src;
+      img = myAvatarArray[i-1].src;
       break;
     }
   }
+  document.getElementById("currentChar").src = img;
 }

@@ -235,13 +235,6 @@ input[type=button] {
 
 /*Container for avatars*/
 .avatarcontainer{
-  /* width: 500px;
-  height: 650px;
-  border: none;
-  padding: 10px;
-  display: inline-flex;
-  margin-inline-start: 35%;
-  position: absolute; */
   margin-left: auto;
   margin-right: auto;
   width: 600px;
@@ -251,20 +244,18 @@ input[type=button] {
 }
 
 #currentChar{
-  margin: 0;
-  width: 60%;
-}
+  width: 275px;
+} 
 
 #prevChar{
   height: 5%;
 }
 
-/* #nextChar{
-  margin-block-start: 150px;
-} */
 body{
   margin:50px;
 }
+
+/* Next char button */
 a.nextChar {
   height:50px;
     line-height:50px;
@@ -275,8 +266,8 @@ a.nextChar {
     background-color:#fcaaaa;
     position:relative;
     display:inline-block;
-
 }
+
 a.nextChar:after{
   position:absolute;
   right:-20px;
@@ -288,6 +279,7 @@ a.nextChar:after{
   border-color: transparent transparent transparent #fcaaaa;
 }
 
+/* Prev char button */
 a.prevChar:before{
   position:absolute;
   left:-20px;
