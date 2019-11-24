@@ -1,13 +1,16 @@
-//File editing
-const fs = require('fs');
-
-// updateBackground
+// update background
 $(window).ready(function(){
-var b = sessionStorage.getItem("gamebackground");
-// var bg = Background.imageArray;
-document.body.style.backgroundImage = "url('" + b + "')";
+  var b = sessionStorage.getItem("gamebackground");
+  if (sessionStorage.length == 0) {
+    document.body.style.backgroundImage = "url('/Resources/background.jpg')";
+  }
+  else{
+    document.body.style.backgroundImage = "url('"+ b + "')";
+  }
 });
 
+//File editing
+const fs = require('fs');
 //-----------POP UP SCREEN (MODAL)-----------
 // Get the modal
 var popup = document.getElementById("popup");

@@ -7,6 +7,7 @@ var i = 0;
 var img = 0;
 document.getElementById('output').textContent = textArr[0];
 document.getElementsByTagName('body')[0];
+document.body.style.backgroundImage = "url('"+ imageArray[0]+"')";
 function Next() {
     i += 1; // increase i by one
     img += 1;

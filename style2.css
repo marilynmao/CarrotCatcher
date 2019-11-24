@@ -1,6 +1,7 @@
 body {
   padding-top: 5rem;
-  background: url('Resources/background.jpg') no-repeat center center fixed;
+  background: no-repeat center center fixed;
+  /* background: url('Resources/background.jpg') no-repeat center center fixed; */
   background-size: cover;
   position: relative;
 }
@@ -95,10 +96,6 @@ body {
 }
 
 /* LANDING PAGE */
-
-.instructions-btn button{
-
-}
 
 .flex-container-row {
   display: flex;
@@ -245,7 +242,7 @@ input[type=button] {
 
 #currentChar{
   width: 275px;
-} 
+}
 
 #prevChar{
   height: 5%;

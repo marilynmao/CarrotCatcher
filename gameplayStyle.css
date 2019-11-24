@@ -49,8 +49,9 @@ body {
     position: relative;
     border: 1px solid red;
     /* overflow: visible; */
-    /*background-color: #31b6ce;*/
-    /* background: url('/Resources/background.jpg') no-repeat center center fixed; */
+    /* background-color: #31b6ce;
+    background: url('/Resources/background.jpg') no-repeat center center fixed; */
+    background: no-repeat center center fixed;
     background-size: cover;
     /* background-color: #cccccc; */
 }
