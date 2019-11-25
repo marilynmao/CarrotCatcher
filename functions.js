@@ -57,6 +57,12 @@ function update_score() {
     score_1.text(score);
 }
 
+function togglePause(){
+  //isRunning = !isRunning;
+
+  isPaused = !isPaused;
+}
+
 function stop_the_game() {
     cancelAnimationFrame(anim_id);
     restart.slideDown();

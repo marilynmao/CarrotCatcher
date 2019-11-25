@@ -22,6 +22,7 @@ var basket = $('#basket'),
     score_updated = false,
     the_game = 0,
     anim_id = 0,
+    isPaused = false;
     carrot_current_position = 0,
     carrot_top = 0,
     basket_top = container_height - basket_height,
