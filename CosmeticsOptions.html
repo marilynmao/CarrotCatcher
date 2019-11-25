@@ -12,10 +12,16 @@
   </head>
 
   <body>
+    <!--Audio-->
+    <audio id="backgroundAudio" autoplay loop>
+      <source src="Resources/babyshark.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="topNav">
       <div class="navLeft">
         <!-- <i class="far fa-question-circle icon"></i> -->
-        <i id="toggleVolume" class="fas fa-volume-up icon"></i>
+        <i id="volumeOn" class="fas fa-volume-up icon"></i>
+        <i id="volumeMute" class="fas fa-volume-mute icon"></i>
       </div>
       <div class="navRight">
         <a href="Leaderboard.html"><i class="fas fa-list-ol icon"></i></a>
@@ -25,9 +31,9 @@
 
     <div>
       <div class="flex-container-row">
-        <button class ="btn btn-primary btn-lg" id="prev"  onclick="Previous()"><</button>
+        <button id="prev" class ="btn btn-primary btn-lg"  onclick="Previous()"><</button>
         <div id="output"></div>
-        <button class ="btn btn-primary btn-lg" id="next" onclick="Next()">></button>
+        <button id="next" class ="btn btn-primary btn-lg" onclick="Next()">></button>
       </div>
     </div>
 
@@ -39,6 +45,7 @@
     </div>
 
   <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
-  <script src="\Scripts\background.js"></script>
+  <script src="\Scripts\Audio.js"></script>
+  <script src="\Scripts\Background.js"></script>
   </body>
 </html>

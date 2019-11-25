@@ -4,6 +4,7 @@ body {
     height: 100%;
     margin: 0;
     font-family: sans-serif;
+
 }
 
 .topNav {
@@ -48,8 +49,9 @@ body {
     position: relative;
     border: 1px solid red;
     /* overflow: visible; */
-    /*background-color: #31b6ce;*/
-    background: url('/Resources/background.jpg') no-repeat center center fixed;
+    /* background-color: #31b6ce;
+    background: url('/Resources/background.jpg') no-repeat center center fixed; */
+    background: no-repeat center center fixed;
     background-size: cover;
     /* background-color: #cccccc; */
 }
@@ -73,7 +75,7 @@ body {
     height: 14.5%;
     width: 11.5%;
     top: 10%;
-    background: url('/Resources/cloud.png');
+    background: url('Resources/cloud.png');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 100;
@@ -97,7 +99,7 @@ body {
     height: 10%;
     width: 2%;
     /* background-color: #fff; */
-    background: url('/Resources/carrot.png');
+    background: url('Resources/carrot.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -122,7 +124,7 @@ body {
     bottom: 0px;
     height: 7%;
     width: 3.5%;
-    background: url('/Resources/brokencarrot1.png');
+    background: url('Resources/brokencarrot1.png');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 11;
@@ -154,7 +156,7 @@ body {
     width: 85px;
     position: absolute;
     bottom: 5px;
-    background: url('/Resources/basket.png');
+    background: url('Resources/basket.png');
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;

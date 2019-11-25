@@ -1,3 +1,14 @@
+// update background
+$(window).ready(function(){
+  var x = sessionStorage.getItem("gamebackground");
+  if (sessionStorage.length == 0) {
+    document.body.style.backgroundImage = "url('/Resources/background.jpg')";
+  }
+  else{
+    document.body.style.backgroundImage = "url('"+ x + "')";
+  }
+});
+
 $(document).on('mousemove', function (e) {
     basket.css('left', e.pageX);
 });
@@ -66,6 +77,11 @@ function togglePause(){
 function stop_the_game() {
     cancelAnimationFrame(anim_id);
     restart.slideDown();
+
+    //testing data transfer between files
+    //localStorage.setItem("score", score);
+    //alert(localStorage.getItem("score"));
+    //window.location.href = "ScoreSubmission.html";
 }
 
 restart.click(function () {
