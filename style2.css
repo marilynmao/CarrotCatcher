@@ -6,6 +6,52 @@ body {
   position: relative;
 }
 
+h1 {
+  font-family: showcard-gothic, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #FF5700;
+  text-shadow: 1.5px 1.5px 5px #969696;
+  letter-spacing: 0.1em;
+  word-spacing: 0.4em;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 .topNav {
   position: absolute;
   top: -100px;
@@ -93,6 +139,7 @@ body {
 .icon {
   font-size: 2em; /*font awesome icons are sized by font-size*/
   color: #044444;
+  filter: drop-shadow(0 0 0.75rem white);
 }
 
 /* LANDING PAGE */
@@ -127,7 +174,7 @@ body {
 }
 
 .helpImage {
-  width: 70%;
+  width: 30%;
 }
 
 /* Popup box BEGIN */
@@ -151,13 +198,34 @@ body {
   margin: 5% auto;
   padding: 20px;
   width: 30%; /* Could be more or less, depending on screen size */
+  font-size: 2em;
+}
+
+.modal-content h1 {
+  margin-top: 0.5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-content img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 50%;
+}
+
+.modal-content p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.5em;
+}
+
+.modal-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* The Close Button */
@@ -178,7 +246,7 @@ body {
 
 
 /* score submission page */
-.container{
+.score-container{
   position: relative;
   margin: auto;
   width: 60%;
