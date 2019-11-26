@@ -79,7 +79,7 @@ function togglePause(){
 
 function stop_the_game() {
     cancelAnimationFrame(anim_id);
-    //restart.slideDown();
+    restart.slideDown();
 
     //Transferring score to submit score screen and then leaderboard
     localStorage.setItem("score", score);

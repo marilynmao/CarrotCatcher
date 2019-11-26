@@ -17,7 +17,7 @@ body {
 
 .navLeft {
   float: left;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 20px;
 }
 
@@ -27,7 +27,7 @@ body {
 
 .navRight {
   float: right;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-right: 20px;
 }
 
@@ -59,7 +59,7 @@ body {
 #score_help {
     text-align: center;
     font-size: 25px;
-    background-color: #ffa500;
+    background-color: #eaeaea;
 }
 
 #skyline {
