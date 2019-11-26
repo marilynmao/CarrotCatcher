@@ -5,9 +5,16 @@ var imageArray = new Array('Resources/background.jpg', 'Resources/background2.pn
 
 var i = 0;
 var img = 0;
-document.getElementById('output').textContent = textArr[0];
+var bgname = document.getElementById('output').textContent = textArr[0];
 document.getElementsByTagName('body')[0];
-document.body.style.backgroundImage = "url('"+ imageArray[0]+"')";
+
+if(bgname === 'Hilly Terrain')
+{
+  document.body.style.backgroundImage = "url('"+ imageArray[0]+"')";
+  bg = imageArray[0];
+  sessionStorage.setItem("gamebackground", bg);
+}
+
 function Next() {
     i += 1; // increase i by one
     img += 1;
