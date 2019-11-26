@@ -6,7 +6,7 @@ $(window).ready(function(){
   }
   else{
     document.body.style.backgroundImage = "url('"+ x + "')";
-    //document.body.style.backgroundSize = "1280px 720px";
+    document.body.style.backgroundSize = "1280px 720px";
     //document.body.style.backgroundSize = "720px";
 
   }
