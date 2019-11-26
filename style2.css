@@ -139,6 +139,7 @@ h1 {
 .icon {
   font-size: 2em; /*font awesome icons are sized by font-size*/
   color: #044444;
+  filter: drop-shadow(0 0 0.75rem white);
 }
 
 /* LANDING PAGE */
