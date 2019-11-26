@@ -1,3 +1,14 @@
+// update background
+$(window).ready(function(){
+  var x = sessionStorage.getItem("gamebackground");
+  if (sessionStorage.length == 0) {
+    document.body.style.backgroundImage = "url('/Resources/background.jpg')";
+  }
+  else{
+    document.body.style.backgroundImage = "url('"+ x + "')";
+  }
+});
+
 $(document).on('mousemove', function (e) {
     basket.css('left', e.pageX);
 });
@@ -57,9 +68,19 @@ function update_score() {
     score_1.text(score);
 }
 
+function togglePause(){
+  //isRunning = !isRunning;
+
+  isPaused = !isPaused;
+}
+
 function stop_the_game() {
     cancelAnimationFrame(anim_id);
     restart.slideDown();
+
+    //Transferring score to submit score screen and then leaderboard
+    localStorage.setItem("score", score);
+    window.location.href = "ScoreSubmission.html";
 }
 
 restart.click(function () {

@@ -34,8 +34,8 @@
     <!-- High Score 1 -->
     <div class="leaderboard-box">
       <div class="flex-container-row">
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> ABC </h1>
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> 500 </h1>
+        <h1 id = "name1" class = "leaderboard-attr" style="color:#ffffff"> t </h1>
+        <h1 id = "score1" class = "leaderboard-attr" style="color:#ffffff"> t </h1>
         <img src="Resources/char0.png" class="leaderboard-attr" style="object-fit: contain"</img>
       </div>
     </div>
@@ -43,8 +43,8 @@
     <!-- High Score 2 -->
     <div class="leaderboard-box">
       <div class="flex-container-row">
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> DEF </h1>
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> 270 </h1>
+        <h1 id = "name2" class = "leaderboard-attr" style="color:#ffffff"> t </h1>
+        <h1 id = "score2" class = "leaderboard-attr" style="color:#ffffff"> t </h1>
         <img src="Resources/char3.png" class="leaderboard-attr" style="object-fit: contain"</img>
       </div>
     </div>
@@ -52,8 +52,8 @@
   <!-- High Score 3 -->
     <div class="leaderboard-box">
       <div class="flex-container-row">
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> GHI </h1>
-        <h1 class = "leaderboard-attr" style="color:#ffffff"> 90 </h1>
+        <h1 id = "name3" class = "leaderboard-attr" style="color:#ffffff"> t </h1>
+        <h1 id = "score3" class = "leaderboard-attr" style="color:#ffffff"> t </h1>
         <img src="Resources/char7.png" class="leaderboard-attr" style="object-fit: contain"</img>
       </div>
     </div>
@@ -65,14 +65,61 @@
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
+    <!-- Javascript to fill in and update leaderboard -->
+    <script>
+    //Filling in the default values
+    document.getElementById("name1").innerHTML = localStorage.getItem("ldrN1");
+    document.getElementById("score1").innerHTML = localStorage.getItem("ldrS1");
+
+    document.getElementById("name2").innerHTML = localStorage.getItem("ldrN2");
+    document.getElementById("score2").innerHTML = localStorage.getItem("ldrS2");
+
+    document.getElementById("name3").innerHTML = localStorage.getItem("ldrN3");
+    document.getElementById("score3").innerHTML = localStorage.getItem("ldrS3");
+
+    //New highest score or tied
+    if(localStorage.getItem("score") > localStorage.getItem("ldrS1"))
+    {
+      document.getElementById("name2").innerHTML = localStorage.getItem("ldrN1");
+      document.getElementById("score2").innerHTML = localStorage.getItem("ldrS1");
+
+      document.getElementById("name3").innerHTML = localStorage.getItem("ldrN2");
+      document.getElementById("score3").innerHTML = localStorage.getItem("ldrS2");
+
+      localStorage.setItem("ldrN1", localStorage.getItem("name"))
+      localStorage.setItem("ldrS1", localStorage.getItem("score"))
+
+      document.getElementById("name1").innerHTML = localStorage.getItem("ldrN1")
+      document.getElementById("score1").innerHTML = localStorage.getItem("ldrS1")
+    }
+    //New second highest score or tied
+    else if(localStorage.getItem("score") > localStorage.getItem("ldrS2"))
+    {
+      document.getElementById("name3").innerHTML = localStorage.getItem("ldrN2");
+      document.getElementById("score3").innerHTML = localStorage.getItem("ldrS2");
+
+      localStorage.setItem("ldrN2", localStorage.getItem("name"))
+      localStorage.setItem("ldrS2", localStorage.getItem("score"))
+
+      document.getElementById("name2").innerHTML = localStorage.getItem("ldrN2")
+      document.getElementById("score2").innerHTML = localStorage.getItem("ldrS2")
+    }
+    //New third highest score or tied
+    else if(localStorage.getItem("score") > localStorage.getItem("ldrS3"))
+    {
+      localStorage.setItem("ldrN3", localStorage.getItem("name"))
+      localStorage.setItem("ldrS3", localStorage.getItem("score"))
+
+      document.getElementById("name3").innerHTML = localStorage.getItem("ldrN3")
+      document.getElementById("score3").innerHTML = localStorage.getItem("ldrS3")
+    }
+  </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS , then Font fontawesome-->
-    <script src="Scripts\js2.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="\Scripts\js2.js"></script>
   </body>
 </html>
