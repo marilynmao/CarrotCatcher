@@ -2,13 +2,10 @@
 $(window).ready(function(){
   var x = sessionStorage.getItem("gamebackground");
   if (sessionStorage.length == 0) {
-    document.body.style.backgroundImage = "url('/Resources/background.jpg')";
+    document.getElementById("container").style.backgroundImage = "url('/Resources/background.jpg')";
   }
   else{
-    document.body.style.backgroundImage = "url('"+ x + "')";
-    document.body.style.backgroundSize = "1280px 720px";
-    //document.body.style.backgroundSize = "720px";
-
+    document.getElementById("container").style.backgroundImage = "url('"+ x + "')";
   }
 });
 

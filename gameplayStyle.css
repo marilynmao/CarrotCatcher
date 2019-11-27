@@ -51,7 +51,7 @@ body {
     /* overflow: visible; */
     /* background-color: #31b6ce;
     background: url('/Resources/background.jpg') no-repeat center center fixed; */
-    background: no-repeat center center fixed;
+    background-repeat: no-repeat;
     background-size: cover;
     /* background-color: #cccccc; */
 }

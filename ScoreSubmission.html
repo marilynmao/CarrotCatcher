@@ -36,7 +36,15 @@
       </div>
     </div>
   <script>document.getElementById("num").innerHTML = localStorage.getItem("score");</script>
-
+  <script>
+    var b = sessionStorage.getItem("gamebackground");
+     if (sessionStorage.length == 0) {
+       document.body.style.backgroundImage = "url('/Resources/background.jpg')";
+     }
+     else{
+       document.body.style.backgroundImage = "url('"+ b + "')";
+     }
+  </script>
   <script src="Scripts/js2.js"></script>
 
 
