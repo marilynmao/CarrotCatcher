@@ -11,16 +11,41 @@
     <link href="style2.css" rel="stylesheet">
 
   </head>
+  <style>
+      body {
+        background-image: url('Resources/background.jpg');
+      }
+      </style>
   <body>
+     <!--Audio-->
+     <audio id="backgroundAudio" autoplay loop>
+        <source src="Resources/Sounds/cosmetics.wav" type="audio/mpeg">
+      </audio>
+  
+      <div class="topNav">
+        <div class="navLeft">
+          <i id="volumeOn" class="fas fa-volume-up icon"></i>
+          <i id="volumeMute" class="fas fa-volume-mute icon"></i>
+        </div>
+        <div class="navRight">
+          <a href="Leaderboard.html"><i class="fas fa-list-ol icon"></i></a>
+        </div>
+      </div>
 
     <!-- Select Avatar Page -->
     <div class = "avatarcontainer">
 
       <a href="#" onclick="prevChar();" class="prevChar">&#8249;</a>
       <img src = 'Resources/char0.png' id = "currentChar">
-      <a href="#" onclick="nextChar();" class="nextChar">&#8250;</a>\
+      <a href="#" onclick="nextChar();" class="nextChar">&#8250;</a>
     
     </div>
+
+    <div class="bottomNav">
+        <div class="flex-container-row">
+          <a href="LandingPage2.html"><button type="button" class ="btn btn-primary btn-lg -btn leaderboard-btn"> Done </button></a>
+        </div>
+      </div>
 
     <script src="\Scripts\Avatar.js"></script>
 

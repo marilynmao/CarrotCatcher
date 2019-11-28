@@ -1,11 +1,14 @@
-// update background
+// update background and avatar
 $(window).ready(function(){
   var x = sessionStorage.getItem("gamebackground");
+  var y = sessionStorage.getItem("avatar");
   if (sessionStorage.length == 0) {
     document.getElementById("container").style.backgroundImage = "url('/Resources/background.jpg')";
+    document.getElementById("basket").style.backgroundImage = "url('/Resources/char0.png')";
   }
   else{
     document.getElementById("container").style.backgroundImage = "url('"+ x + "')";
+    document.getElementById("basket").style.backgroundImage = "url('"+ y + "')";
   }
 });
 

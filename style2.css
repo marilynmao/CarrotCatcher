@@ -302,6 +302,7 @@ input[type=button] {
 
 /*Container for avatars*/
 .avatarcontainer{
+  padding: 60px;
   margin-left: auto;
   margin-right: auto;
   width: 600px;
@@ -322,51 +323,3 @@ body{
   margin:50px;
 }
 
-/* Next char button */
-a.nextChar {
-  height:50px;
-    line-height:50px;
-    vertical-align:middle;
-    text-align:center;
-    padding:0 25px;
-    color:#ffffff;
-    background-color:#fcaaaa;
-    position:relative;
-    display:inline-block;
-}
-
-a.nextChar:after{
-  position:absolute;
-  right:-20px;
-  content:" ";
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 25px 0 25px 20px;
-  border-color: transparent transparent transparent #fcaaaa;
-}
-
-/* Prev char button */
-a.prevChar:before{
-  position:absolute;
-  left:-20px;
-  content:" ";
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 25px 20px 25px 0;
-  border-color: transparent #fcaaaa transparent transparent ;
-}
-
-a.prevChar {
-  height:50px;
-    line-height:50px;
-    vertical-align:middle;
-    text-align:center;
-    padding:0 25px;
-    color:#ffffff;
-    background-color:#fcaaaa;
-    position:relative;
-    display:inline-block;
-
-}
