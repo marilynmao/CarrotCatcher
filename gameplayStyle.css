@@ -69,7 +69,7 @@ body {
 .cloud {
     position: absolute;
     height: 14.5%;
-    width: 11.8%;
+    width: 11.5%;
     top: 10%;
     background: url('Resources/cloud.png');
     background-size: cover;
@@ -119,8 +119,8 @@ body {
     position: absolute;
     bottom: 0px;
     height: 7%;
-    width: 3.5%;
-    background: url('Resources/brokencarrot1.png');
+    width: 7%;
+    background: url('Resources/carrot_miss_small.png');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 11;
@@ -158,8 +158,8 @@ body {
   }
 
 #basket {
-    height: 190px;
-    width: 145px;
+    height: 100px;
+    width: 85px;
     position: absolute;
     bottom: 0px;
     background-size: cover;
