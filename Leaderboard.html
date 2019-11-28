@@ -66,7 +66,32 @@
 
     <!-- Javascript to fill in and update leaderboard -->
     <script>
+    //localStorage.clear()
     //Filling in the default values
+    if(localStorage.getItem("ldrN1") == null)
+    {
+      localStorage.setItem("ldrN1", "-")
+    }
+    if(localStorage.getItem("ldrS1") == null)
+    {
+      localStorage.setItem("ldrS1", "0")
+    }
+    if(localStorage.getItem("ldrN2") == null)
+    {
+      localStorage.setItem("ldrN2", "-")
+    }
+    if(localStorage.getItem("ldrS2") == null)
+    {
+      localStorage.setItem("ldrS2", "0")
+    }
+    if(localStorage.getItem("ldrN3") == null)
+    {
+      localStorage.setItem("ldrN3", "-")
+    }
+    if(localStorage.getItem("ldrS3") == null)
+    {
+      localStorage.setItem("ldrS3", "0")
+    }
     document.getElementById("name1").innerHTML = localStorage.getItem("ldrN1");
     document.getElementById("score1").innerHTML = localStorage.getItem("ldrS1");
 
@@ -77,38 +102,50 @@
     document.getElementById("score3").innerHTML = localStorage.getItem("ldrS3");
 
     //New highest score or tied
-    if(localStorage.getItem("score") > localStorage.getItem("ldrS1"))
+    if(parseInt(localStorage.getItem("score"),10) > parseInt(localStorage.getItem("ldrS1"),10))
     {
-      document.getElementById("name2").innerHTML = localStorage.getItem("ldrN1");
-      document.getElementById("score2").innerHTML = localStorage.getItem("ldrS1");
+      /*alert(parseInt(localStorage.getItem("score"),10))
+      alert(parseInt(localStorage.getItem("ldrS1"),10))*/
 
-      document.getElementById("name3").innerHTML = localStorage.getItem("ldrN2");
-      document.getElementById("score3").innerHTML = localStorage.getItem("ldrS2");
+      localStorage.setItem("ldrN3", localStorage.getItem("ldrN2"))
+      localStorage.setItem("ldrS3", localStorage.getItem("ldrS2"))
+      document.getElementById("name3").innerHTML = localStorage.getItem("ldrN3");
+      document.getElementById("score3").innerHTML = localStorage.getItem("ldrS3");
+
+      localStorage.setItem("ldrN2", localStorage.getItem("ldrN1"))
+      localStorage.setItem("ldrS2", localStorage.getItem("ldrS1"))
+      document.getElementById("name2").innerHTML = localStorage.getItem("ldrN2");
+      document.getElementById("score2").innerHTML = localStorage.getItem("ldrS2");
 
       localStorage.setItem("ldrN1", localStorage.getItem("name"))
       localStorage.setItem("ldrS1", localStorage.getItem("score"))
-
       document.getElementById("name1").innerHTML = localStorage.getItem("ldrN1")
       document.getElementById("score1").innerHTML = localStorage.getItem("ldrS1")
     }
     //New second highest score or tied
-    else if(localStorage.getItem("score") > localStorage.getItem("ldrS2"))
+    else if(parseInt(localStorage.getItem("score"),10) > parseInt(localStorage.getItem("ldrS2"),10))
     {
-      document.getElementById("name3").innerHTML = localStorage.getItem("ldrN2");
-      document.getElementById("score3").innerHTML = localStorage.getItem("ldrS2");
+      /*alert(parseInt(localStorage.getItem("score"),10))
+      alert(parseInt(localStorage.getItem("ldrS2"),10))*/
+
+      localStorage.setItem("ldrN3", localStorage.getItem("ldrN2"))
+      localStorage.setItem("ldrS3", localStorage.getItem("ldrS2"))
+      document.getElementById("name3").innerHTML = localStorage.getItem("ldrN3");
+      document.getElementById("score3").innerHTML = localStorage.getItem("ldrS3");
 
       localStorage.setItem("ldrN2", localStorage.getItem("name"))
       localStorage.setItem("ldrS2", localStorage.getItem("score"))
-
       document.getElementById("name2").innerHTML = localStorage.getItem("ldrN2")
       document.getElementById("score2").innerHTML = localStorage.getItem("ldrS2")
     }
     //New third highest score or tied
-    else if(localStorage.getItem("score") > localStorage.getItem("ldrS3"))
+    else if(parseInt(localStorage.getItem("score"),10) > parseInt(localStorage.getItem("ldrS3"),10))
     {
+      /*alert(parseInt(localStorage.getItem("score"),10))
+      alert(parseInt(localStorage.getItem("ldrS3"),10))*/
+
       localStorage.setItem("ldrN3", localStorage.getItem("name"))
       localStorage.setItem("ldrS3", localStorage.getItem("score"))
-
       document.getElementById("name3").innerHTML = localStorage.getItem("ldrN3")
       document.getElementById("score3").innerHTML = localStorage.getItem("ldrS3")
     }
