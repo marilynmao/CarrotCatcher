@@ -27,4 +27,5 @@ var basket = $('#basket'),
     carrot_top = 0,
     basket_top = container_height - basket_height,
     miss_num = 0;
+    mySound = null;
 life_span.text(life);

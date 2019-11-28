@@ -1,5 +1,6 @@
 // update background and avatar
 $(window).ready(function(){
+  mySound = new sound("/Resources/Sounds/bell.mp3");
   var x = sessionStorage.getItem("gamebackground");
   var y = sessionStorage.getItem("avatar");
   if (sessionStorage.length == 0) {
@@ -25,6 +26,7 @@ function check_carrot_hits_floor(carrot) {
     if (collision(carrot, floor)) {
         show_miss(carrot);
         decrement_life();
+        miss_audio();
         return true;
     }
     return false;
@@ -55,6 +57,8 @@ function check_carrot_hits_basket(carrot) {
     if (collision(carrot, basket)) {
         carrot_top = parseInt(carrot.css('top'));
         if (carrot_top < basket_top) {
+            //mySound.play();
+            hit_audio();
             update_score();
             return true;
         }
@@ -75,6 +79,39 @@ function togglePause(){
   //isRunning = !isRunning;
 
   isPaused = !isPaused;
+}
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
+
+function hit_audio(){
+        var audio = document.createElement("audio");
+        audio.src = "/Resources/Sounds/bell.mp3";
+        audio.addEventListener("ended", function () {
+            document.removeChild(this);
+        }, false);
+        audio.play();
+}
+
+function miss_audio(){
+        var audio = document.createElement("audio");
+        audio.src = "/Resources/Sounds/snap.mp3";
+        audio.addEventListener("ended", function () {
+                document.removeChild(this);
+        }, false);
+        audio.play();
 }
 
 function stop_the_game() {
