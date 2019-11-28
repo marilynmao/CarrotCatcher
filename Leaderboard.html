@@ -67,7 +67,12 @@
     <!-- Javascript to fill in and update leaderboard -->
     <script>
     //localStorage.clear()
-    //Filling in the default values
+    
+    /*Filling in the default values
+    * They need to be pulled from storage each time so the leaderboard is always correct
+    * However, they default to null when blank, and that cant be compared to the score2
+    * So all these if statements make sure all null instances are set to zero until actual scores replace them
+    */
     if(localStorage.getItem("ldrN1") == null)
     {
       localStorage.setItem("ldrN1", "-")
